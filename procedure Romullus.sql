@@ -67,7 +67,7 @@ end;
 
 execute ImagensPorImovel @imovelID = 3;
 GO
-
+use Romullus
 /*----------------- IMOVEIS POR TIPO DE ANUNCIO ---------------*/
 create procedure ImoveisPorTipo
 @imovelID int
@@ -92,7 +92,7 @@ begin
 	set Valor_imovel = Valor_imovel * @FatordeAumento;
 end;
 
-exec AumentoPorArea @FatordeAumento = 1.2;
+exec AumentoPorArea @FatordeAumento = 1.5;
 
 select * from imovel;
 GO
@@ -105,10 +105,12 @@ as
 
 begin
 	delete from Imovel
-	where fk_Endereco_ID IN (select ID from Endereco where fk_Bairro_ID IN (select ID from Bairro where fk_Cidade_ID = @CidadeID));;
+	where fk_Endereco_ID IN 
+	(select ID from Endereco where fk_Bairro_ID IN 
+	(select ID from Bairro where fk_Cidade_ID = @CidadeID));;
 end;
 
-EXEC DeletaPorCidade @CidadeID = 2;
-
+EXEC DeletaPorCidade @CidadeID = 1;
+use Romullus
 SELECT * FROM Cidade;
 
