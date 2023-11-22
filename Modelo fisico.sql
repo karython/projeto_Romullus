@@ -310,4 +310,3 @@ INSERT INTO Login ( Email, Senha, ID_Usuario) VALUES
 ( 'modsenior1@example.com', 'modseniorpass', 10);
 
 /*----------------------------FIM DA ESTRUTURA DO BANCO DE DADOS-----------------------------------------------------*/
-select * from Bairro;
