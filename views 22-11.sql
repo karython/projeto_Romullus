@@ -20,6 +20,8 @@ on c.fk_UF_ID = u.ID
 where Nome_UF = 'São Paulo';
 
 go
+select * from vw_ImoveisSP
+use Romullus;
 -- imoveis no estado do Rio de Janeiro
 create view vw_ImoveisRJ as
 select
