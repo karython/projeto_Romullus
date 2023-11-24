@@ -106,7 +106,7 @@ begin
 	insert into Usuario (Nome, Senha, DataHoraCrianao, DataHoraUltimoAcesso, email,fk_TipoUsuario_ID)
 	values (@Nome, @Senha, GETDATE(), GETDATE(), @email, @fk);
 end;
-
+go
 exec InserirUsuarios @Nome = 'Jose', @Senha = '456@@123', @email = 'email123@', @fk = 2;
 
 select * from Usuario;
@@ -160,7 +160,6 @@ go
 
 
 select * from vw_DetalhesImovelSP;
-
 
 
 
